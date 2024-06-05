@@ -1,4 +1,3 @@
-/* Kopia styli z załączonego pliku styles.css */
 .ImageGallery {
   display: grid;
   max-width: calc(100vw - 48px);

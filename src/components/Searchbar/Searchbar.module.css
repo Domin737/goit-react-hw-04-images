@@ -1,4 +1,3 @@
-/* Kopia styli z załączonego pliku styles.css */
 .Searchbar {
   top: 0;
   left: 0;
@@ -28,7 +27,7 @@
   overflow: hidden;
 }
 
-.SearchFormButton {
+.SearchForm_button {
   display: inline-block;
   width: 48px;
   height: 48px;
@@ -43,11 +42,11 @@
   outline: none;
 }
 
-.SearchFormButton:hover {
+.SearchForm_button:hover {
   opacity: 1;
 }
 
-.SearchFormButtonLabel {
+.SearchForm_button_label {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -59,7 +58,7 @@
   border: 0;
 }
 
-.SearchFormInput {
+.SearchForm_input {
   display: inline-block;
   width: 100%;
   font: inherit;
@@ -70,7 +69,7 @@
   padding-right: 4px;
 }
 
-.SearchFormInput::placeholder {
+.SearchForm_input::placeholder {
   font: inherit;
   font-size: 18px;
 }

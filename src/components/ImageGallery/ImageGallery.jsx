@@ -3,13 +3,20 @@ import PropTypes from 'prop-types';
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 import styles from './ImageGallery.module.css';
 
-const ImageGallery = ({ images }) => (
-  <ul className={styles.ImageGallery}>
-    {images.map(image => (
-      <ImageGalleryItem key={image.id} image={image} />
-    ))}
-  </ul>
-);
+const ImageGallery = ({ images, onImageClick }) => {
+  return (
+    <ul className={styles.ImageGallery}>
+      {images.map(({ id, webformatURL, largeImageURL }) => (
+        <ImageGalleryItem
+          key={id}
+          webformatURL={webformatURL}
+          largeImageURL={largeImageURL}
+          onClick={() => onImageClick(largeImageURL)}
+        />
+      ))}
+    </ul>
+  );
+};
 
 ImageGallery.propTypes = {
   images: PropTypes.arrayOf(
@@ -19,6 +26,7 @@ ImageGallery.propTypes = {
       largeImageURL: PropTypes.string.isRequired,
     })
   ).isRequired,
+  onImageClick: PropTypes.func.isRequired,
 };
 
 export default ImageGallery;
